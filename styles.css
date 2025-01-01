@@ -208,4 +208,21 @@ nav {
         width: 24px;
         height: 24px;
     }
+
+    .hero {
+        padding-top: 8rem;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+    }
+
+    .service {
+        margin-bottom: 1rem;
+    }
+
+    footer {
+        margin-bottom: 60px; /* Space for WhatsApp banner */
+    }
 }
