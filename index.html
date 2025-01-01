@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">לוגו</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">בית</a></li>
+                <li><a href="about.html">אודות</a></li>
+                <li><a href="#contact">צור קשר</a></li>
+            </ul>
+            <div class="hamburger">&#9776;</div>
+        </nav>
+        <button class="cta"><a href="#contact">צור קשר</a></button>
+    </header>
+
+    <section class="hero">
+        <h1>ברוכים הבאים</h1>
+        <p>תיאור כלשהו על האתר</p>
+    </section>
+
+    <section class="about">
+        <h2>אודותינו</h2>
+        <p>אנחנו חברה שעושה דברים מדהימים. <a href="about.html">קרא עוד</a></p>
+    </section>
+
+    <section class="services">
+        <h2>השירותים שלנו</h2>
+        <div class="service">
+            <img src="placeholder-logo1.png" alt="שירות 1">
+            <p>שירות 1</p>
+        </div>
+        <div class="service">
+            <img src="placeholder-logo2.png" alt="שירות 2">
+            <p>שירות 2</p>
+        </div>
+        <div class="service">
+            <img src="placeholder-logo3.png" alt="שירות 3">
+            <p>שירות 3</p>
+        </div>
+        <img src="placeholder-image.png" alt="תמונה">
+    </section>
+
+    <footer id="contact">
+        <h2>צור קשר</h2>
+        <p>מידע ליצירת קשר יופיע כאן</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const menu = document.querySelector('.menu');
+
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
