@@ -1,83 +1,7 @@
-:root {
-    --primary-color: #4CAF50; /* Changed primary color to a modern green */
-    --text-color: #333;
-    --background-light: #f5f5f5;
-    --transition-speed: 0.3s;
-}
-
-body {
-    font-family: 'Heebo', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    direction: rtl;
-    line-height: 1.6;
-    color: var(--text-color);
-}
-
-/* Header Styles */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding: 1rem 2rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    box-sizing: border-box;
-    z-index: 1000;
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-right: 1rem; /* Added margin to separate the logo from the nav bar */
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-
-.menu {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-}
-
-.menu li a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color var(--transition-speed);
-    padding: 0.5rem 0;
-    position: relative;
-}
-
-.menu li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--primary-color);
-    transition: width var(--transition-speed);
-}
-
-.menu li a:hover::after {
-    width: 100%;
-}
-
 /* WhatsApp Button Styles */
 .whatsapp-button {
     position: fixed;
-    left: 20px;
+    right: 20px; /* Changed from left to right */
     bottom: 20px;
     background-color: #25D366;
     color: white;
@@ -103,63 +27,31 @@ nav {
 }
 
 .whatsapp-mobile-banner {
-    display: none;
-}
-
-/* Sections Styling */
-.hero, .about, .services {
-    padding: 6rem 2rem 4rem;
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.hero {
-    background-color: var(--background-light);
-    min-height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: flex; /* Ensure it is displayed on mobile */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 0.8rem;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    justify-content: space-between;
     align-items: center;
+    z-index: 1000;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.whatsapp-mobile-banner a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #25D366;
+    text-decoration: none;
+    font-weight: 500;
 }
 
-.services-section {
-    padding: 6rem 2rem 4rem;
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.services-section h2 {
-    margin-bottom: 3rem;
-    font-size: 2.5rem;
-    color: var(--text-color);
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
-}
-
-.service {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform var(--transition-speed);
-    width: 100%;
-    margin: 0;
-}
-
-.service:hover {
-    transform: translateY(-5px);
+.whatsapp-mobile-banner svg {
+    width: 24px;
+    height: 24px;
 }
 
 /* Mobile Styles */
@@ -194,35 +86,11 @@ nav {
     }
 
     .whatsapp-button {
-        display: none;
+        display: none; /* Hide the desktop WhatsApp button on mobile */
     }
 
     .whatsapp-mobile-banner {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: white;
-        padding: 0.8rem;
-        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-        justify-content: space-between;
-        align-items: center;
-        z-index: 1000;
-    }
-
-    .whatsapp-mobile-banner a {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: #25D366;
-        text-decoration: none;
-        font-weight: 500;
-    }
-
-    .whatsapp-mobile-banner svg {
-        width: 24px;
-        height: 24px;
+        display: flex; /* Ensure the mobile banner is displayed */
     }
 
     .hero {
