@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #2196F3;
+    --primary-color: #4CAF50; /* Changed primary color to a modern green */
     --text-color: #333;
     --background-light: #f5f5f5;
     --transition-speed: 0.3s;
@@ -33,6 +33,7 @@ header {
     font-size: 1.8rem;
     font-weight: bold;
     color: var(--primary-color);
+    margin-right: 1rem; /* Added margin to separate the logo from the nav bar */
 }
 
 nav {
@@ -188,6 +189,8 @@ nav {
         display: block;
         font-size: 1.8rem;
         cursor: pointer;
+        position: absolute;
+        right: 1rem; /* Ensure the hamburger menu is all the way to the right */
     }
 
     .whatsapp-button {
